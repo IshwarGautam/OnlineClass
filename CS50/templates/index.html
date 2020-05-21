@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!--hello {{name}}-->
+    
+    <h1>Register for BMC students</h1>
+    <form action="/register" method="post">
+        <input name="name" placeholder="Name" type="text">
+        <select name="Field">
+            <option disabled selected value="">Field</option>
+            <option value="Bsc CSIT">Bsc CSIT</option>
+            <option value="ICT">ICT</option>
+            <option value="Bsc Biology">Bsc Biology</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="English">English</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Master in physics">Master in physics</option>
+            <option value="Master in chemistry">Master in chemistry</option>
+            <option value="Master in Nepali">Master in Nepali</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Floriculture">Floriculture</option>
+        </select>
+        <input type="submit" value="Register"> or see <a href="/registered">see who else is registered</a>
+    </form>
+<!--
+<script>
+    document.querySelector('form').onsubmit=function(){
+        if(!document.querySelector('input').value){
+            alert("You must provide your name!");
+            return false;
+        }
+        else if(!document.querySelector('select').value){
+            alert("You must provide your Field!");
+            return false;
+        }
+        return true;
+    };
+</script>
+-->
+{% endblock %}
